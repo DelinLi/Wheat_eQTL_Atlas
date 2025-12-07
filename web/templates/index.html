@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheat eQTL Search</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { text-align: center; }
+        input, button { padding: 10px; margin: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+		.photo img {
+            max-width: 100%;  /* Limit width to 100% of parent container */
+            height: auto;     /* Maintain aspect ratio */
+            display: block;   /* Block display to remove any spacing below the image */
+            margin-bottom: 20px; /* Space between images */
+        }
+		.highlight {
+    	background-color: #ff6347;  /* Example: change to tomato red */
+    	color: white;
+		}
+        /* Style for overall container */
+        .photos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Optional styling for the text */
+        .photo h3 {
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Gene Information</h1>
+    <form method="POST">
+        <label for="name">Enter Gene ID (CS V2.1):</label>
+        <input type="text" id="name" name="name" placeholder="Type name here" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if results %}
+    <h2>Search Results</h2>
+    
+	<h2>Results for "{{ results[0].Geneid }}"</h2>
+        <!-- Display Photos Once with Grade Information -->
+        <div class="photos">
+            {% for grade, photo in photos %}
+                <div class="photo">
+                    <h3>{{ grade }}</h3>
+                    {% if photo %}
+                        <img src="{{ url_for('static', filename='image/' ~ photo) }}" alt="{{ grade }} Photo" width="1200">
+                    {% else %}
+						 <p>No figure or eQTL available for {{ grade }}.</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+
+    <table>
+        <tr>
+            <th>Project</th>
+            <th>Tissue</th>
+            <th>SamplesNo</th>
+            <th>Geneid</th>
+            <th>Chr</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Strand</th>
+            <th>Type</th>
+            <th>Chr_SNP</th>
+            <th>Position</th>
+            <th>maf</th>
+            <th>Pvalue</th>
+            <th>Distance</th>
+        </tr>
+        {% for row in results %}
+        <tr class="{% if row.Type == 'cis' %}highlight{% endif %}">
+            <td>{{ row.Project }}</td>
+            <td>{{ row.Tissue }}</td>
+            <td>{{ row.SamplesNo }}</td>
+            <td>{{ row.Geneid }}</td>
+            <td>{{ row.Chr }}</td>
+            <td>{{ row.Start }}</td>
+            <td>{{ row.End }}</td>
+            <td>{{ row.Strand }}</td>
+            <td>{{ row.Type }}</td>
+            <td>{{ row.Chr_SNP }}</td>
+            <td>{{ row.Position }}</td>
+            <td>{{ row.maf }}</td>
+            <td>{{ row.Pvalue }}</td>
+            <td>{{ row.Distance }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No results found. Either not a CS V2.1 ID or a gene without any eQTL.</p>
+    {% endif %}
+</body>
+</html>
+
