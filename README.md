@@ -21,10 +21,12 @@ This document describes how to build a static website for searching and viewing 
 -------
 
 - **[NGINX](https://nginx.org/index.html)**
-
-	- `sudo apt-get install nginx`
+  
+  - `sudo apt-get install nginx`
 
 - **Python 3.10.12** 
+  
+  - Install "Flask" `pip install flask` and MySTL connector `pip install mysql-connector-python`: 
 
 - **Data**
   
