@@ -150,7 +150,7 @@ Create a MySQL user (e.g., flask_user) with a secure password (user and password
 ```
 sudo mysql -u root -p
 
-# for example user "flask_user" with password "wheateQTLs@2024"
+# for example user "flask_user" with password "wheateQTLs@2025"
 
 CREATE USER 'flask_user'@'localhost' IDENTIFIED BY 'wheateQTLs@2025';GRANT ALL PRIVILEGES ON eqtl.* TO 'flask_user'@'localhost';
 FLUSH PRIVILEGES;
