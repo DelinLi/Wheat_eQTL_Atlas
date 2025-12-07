@@ -2,7 +2,7 @@
 
 ------
 
-This document describes how to build a static website for searching and viewing the Wheat eQTL Atlas. For example, the site displays Manhattan plots for each dataset and a summary table of eQTLs for *Rht1-B* (TraesCS4B03G0093100 in Chinese Spring V2.1). These instructions are adapted for an Ubuntu server; modifications may be required for other platforms.
+This document describes how to build a static website for searching and viewing the Wheat eQTL Atlas. For example, the site displays Manhattan plots for each dataset and a summary table of eQTLs for *Rht1-B* (*TraesCS4B03G0093100* in Chinese Spring V2.1). These instructions are adapted for an Ubuntu server; modifications may be required for other platforms.
 
 ![](/images/web.rhtb1.png)
 
