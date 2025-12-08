@@ -26,18 +26,20 @@ This document describes how to build a static website for searching and viewing 
 
 - **Python 3.10.12** 
   
+  -   
+    
   - Install "Flask" `pip install flask` and MySTL connector `pip install mysql-connector-python`: 
 
 - **Data**
   
-  - Website files, Manhattan plots in PNG format, and the eQTL summary table are available on [FigShare](https://figshare.com/s/52f90b2ab51df33b0d46).
+  - Website files, Manhattan plots in PNG format, and the eQTL summary table are available on [BaiduYun](https://pan.baidu.com/): [Wheat_eQTL_Atlas](https://pan.baidu.com/s/13JyHtHsUT5Ooo-VZka4YZA?pwd=zhrn) 
 
 ## Web and Data
 
 -------
 
-- **Data**
-  All files listed below are available from [FigShare](https://figshare.com/s/52f90b2ab51df33b0d46). Place them into the following directory structure:
+- **Data and Environment**
+  All files listed below are available from [Wheat_eQTL_Atlas](https://pan.baidu.com/s/13JyHtHsUT5Ooo-VZka4YZA?pwd=zhrn). Place them into the following directory structure:
   
   ```
   mkdir -p /var/www/eqtl
@@ -54,6 +56,8 @@ This document describes how to build a static website for searching and viewing 
   # the eqtls table will be load to MySQL server 
   gunzip Wheat.FourPanels.eQTLs.formated.2025.csv.gz
   ```
+  
+  A Python 3 environment:   `python -m venv venv` and   `source venv/bin/activate`
 
 - **NGINX Configuration**
 
@@ -123,7 +127,7 @@ CREATE TABLE wheat (
    Distance VARCHAR(20));
 ```
 
-**2.2 Load the table from `ALL.merged.formated.2025.csv`:
+**2.2 Load the table from `ALL.merged.formated.2025.csv`**:
 
 ```
 # enable local file loading
@@ -176,7 +180,7 @@ To bring the Static Website online: `python eqtl.py`, then access it via `http:/
 1. If you use the data of this respository, please cite our **coming soon paper**:
    A Multi-Tissue eQTL Atlas Across Development and Genetic Backgrounds in Wheat Unveils Dynamic Regulation of the Transcriptome.
 
-2. Ciation for the ground tissue of 2-week-old **seedling** RNA-Seq data (SRA Project: PRJNA670223):
+2. Ciation for the ground tissue of 2-week-old **Seedling** RNA-Seq data (SRA Project: PRJNA670223):
    [He, F., Wang, W., Rutter, W. B., Jordan, K. W., Ren, J., Taagen, E., ... & Akhunov, E. (2022). Genomic variants affecting homoeologous gene expression dosage contribute to agronomic trait variation in allopolyploid wheat. Nature Communications, 13(1), 826.](https://doi.org/10.1038/s41467-022-28453-y)
 
 3. Ciation for the **Leaves** at the three-leaf stage RNA-Seq data (SRA Project: PRJNA795836):
