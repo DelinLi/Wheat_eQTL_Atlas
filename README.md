@@ -26,8 +26,6 @@ This document describes how to build a static website for searching and viewing 
 
 - **Python 3.10.12** 
   
-  -   
-    
   - Install "Flask" `pip install flask` and MySTL connector `pip install mysql-connector-python`: 
 
 - **Data**
