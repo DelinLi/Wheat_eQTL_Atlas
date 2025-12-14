@@ -2,7 +2,7 @@
 
 ------
 
-This document describes how to build a static website for searching and viewing the Wheat eQTL Atlas. For example, the site displays Manhattan plots for each dataset and a summary table of eQTLs for *Rht1-B* (*TraesCS4B03G0093100* in Chinese Spring V2.1). These instructions are adapted for an Ubuntu server; modifications may be required for other platforms.
+This document describes how to build a website for searching and viewing the Wheat eQTL Atlas. For example, the site displays Manhattan plots for each dataset and a summary table of eQTLs for *Rht1-B* (*TraesCS4B03G0093100* in Chinese Spring V2.1). These instructions are adapted for an Ubuntu server; modifications may be required for other platforms. For **Windows**, Ubuntu could be installed from the microsoft store.
 
 ![](/images/web.rhtb1.png)
 
@@ -178,13 +178,13 @@ To bring the Static Website online: `python eqtl.py`, then access it via `http:/
 1. If you use the data of this respository, please cite our **coming soon paper**:
    A Multi-Tissue eQTL Atlas Across Development and Genetic Backgrounds in Wheat Unveils Dynamic Regulation of the Transcriptome.
 
-2. Ciation for the ground tissue of 2-week-old **Seedling** RNA-Seq data (SRA Project: PRJNA670223):
+2. Ciation for the ground tissue of 2-week-old **Plant** RNA-Seq data (SRA Project: PRJNA670223):
    [He, F., Wang, W., Rutter, W. B., Jordan, K. W., Ren, J., Taagen, E., ... & Akhunov, E. (2022). Genomic variants affecting homoeologous gene expression dosage contribute to agronomic trait variation in allopolyploid wheat. Nature Communications, 13(1), 826.](https://doi.org/10.1038/s41467-022-28453-y)
 
-3. Ciation for the **Leaves** at the three-leaf stage RNA-Seq data (SRA Project: PRJNA795836):
+3. Ciation for the **Seedling** Leaves at the three-leaf stage RNA-Seq data (SRA Project: PRJNA795836):
    [Mei, F., Chen, B., Du, L., Li, S., Zhu, D., Chen, N., ... & Mao, H. (2022). A gain-of-function allele of a DREB transcription factor gene ameliorates drought tolerance in wheat. The Plant Cell, 34(11), 4472-4494.](https://doi.org/10.1093/plcell/koac248)
 
-4. Ciation for the second or third seedling **Leaf** RNA-Seq data (SRA Project: PRJNA912645):
+4. Ciation for the second or third seedling **Leaf**  RNA-Seq data (SRA Project: PRJNA912645):
    [Barratt, L. J., He, Z., Fellgett, A., Wang, L., Mason, S. M., Bancroft, I., & Harper, A. L. (2023). Co‐expression network analysis of diverse wheat landraces reveals markers of early thermotolerance and a candidate master regulator of thermotolerance genes. The Plant Journal, 115(3), 614-626.](https://doi.org/10.1111/tpj.16248)
 
 5. Ciation for the **Root** at 14 days after germination RNA-Seq data (SRA Project: PRJNA838764):
