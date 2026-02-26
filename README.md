@@ -178,8 +178,6 @@ To bring the Static Website online: `python eqtl.py`, then access it via `http:/
 1. If you use the data of this respository, please cite:
    [Li, D., Ma, S., Liu, J., Chen, T., Dong, L., Ni, F., Li, H., Wu, Q., & Liu, Z. (2026). A seedling-stage expression quantitative trait locus atlas across tissues and genetic backgrounds in wheat. Genomics Communications, 3(1).](https://doi.org/10.48130/gcomm-0026-0002)
 
-   A Multi-Tissue eQTL Atlas Across Development and Genetic Backgrounds in Wheat Unveils Dynamic Regulation of the Transcriptome.
-
 2. Ciation for the ground tissue of 2-week-old **Plant** RNA-Seq data (SRA Project: PRJNA670223):
    [He, F., Wang, W., Rutter, W. B., Jordan, K. W., Ren, J., Taagen, E., ... & Akhunov, E. (2022). Genomic variants affecting homoeologous gene expression dosage contribute to agronomic trait variation in allopolyploid wheat. Nature Communications, 13(1), 826.](https://doi.org/10.1038/s41467-022-28453-y)
 
